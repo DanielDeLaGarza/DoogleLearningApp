@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
@@ -47,7 +47,6 @@ group :development, :test do
 end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'rspec-rails', '2.5.0'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -58,6 +57,7 @@ end
 group :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec'
+  gem 'rspec-rails'
   gem 'jasmine'
   gem 'capybara'
   gem 'factory_girl'
