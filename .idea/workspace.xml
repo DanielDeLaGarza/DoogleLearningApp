@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e282db45-debf-4066-9255-526b29c6c422" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/doogle.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/doogle.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/doogle/search.html.erb" afterPath="$PROJECT_DIR$/app/views/doogle/search.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="doogle_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,6 +28,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -49,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/doogle/search.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
@@ -98,12 +107,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/doogle_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/doogle.scss" />
         <option value="$PROJECT_DIR$/app/views/doogle/search.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -474,12 +483,12 @@
       <workItem from="1468609113927" duration="462000" />
       <workItem from="1468609666882" duration="188000" />
       <workItem from="1468615148138" duration="4171000" />
-      <workItem from="1468865480291" duration="8338000" />
+      <workItem from="1468865480291" duration="8958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13159000" />
+    <option name="totallyTimeSpent" value="13779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1140" extended-state="6" />
@@ -577,14 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/search/search.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -645,6 +646,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
           <folding />
         </state>
       </provider>
