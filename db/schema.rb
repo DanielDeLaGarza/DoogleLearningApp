@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719000204) do
+ActiveRecord::Schema.define(version: 20160720204727) do
 
-  create_table "word_definitions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "definition", limit: 65535
+  create_table "definitions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "content",    limit: 65535
     t.integer  "word_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.index ["word_id"], name: "index_word_definitions_on_word_id", using: :btree
+    t.index ["word_id"], name: "index_definitions_on_word_id", using: :btree
   end
 
   create_table "words", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "word"
+    t.string   "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "word_definitions", "words"
+  add_foreign_key "definitions", "words"
 end

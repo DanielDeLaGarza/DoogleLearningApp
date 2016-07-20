@@ -62,6 +62,8 @@ group :test do
   gem 'jasmine'
   gem 'capybara'
   gem 'guard-rspec'
+  gem 'selenium-webdriver'
+  gem 'faker'
 end
 
 group :production do
