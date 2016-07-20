@@ -7,7 +7,7 @@ describe Word do
     FactoryGirl.create(:word).should be_valid
   end
   it "accepts hyphenated words" do
-    FactoryGirl.create(:word, content: 'able-bodied').should be_valid
+    FactoryGirl.build(:word, content: 'able-bodied').should be_valid
   end
   it "cannot have nil word" do
     FactoryGirl.build(:word, content: nil).should_not be_valid
@@ -26,12 +26,13 @@ describe Word do
     FactoryGirl.build(:word, content: 'test').should_not be_valid
   end
 
-  it "should have acces to definitons with definitons method" do
-    word = FactoryGirl.create(:word_with_definitions, definitions_count: 5)
-    word.should be_valid
-    word.definitions.count.should eq(5)
-    word.definitions.each do |d|
-      d.should be_valid
+  describe "getting word definitions" do
+    let!(:definitions){FactoryGirl.create(:word_with_definitions, definitions_count: 5).definitions}
+    it "definitions should be valid" do
+      definitions.count.should eq(5)
+      definitions.each do |d|
+        d.should be_valid
+      end
     end
   end
 
