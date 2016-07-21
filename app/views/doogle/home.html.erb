@@ -1,0 +1,20 @@
+<div id="doogle">
+  <h1>
+    <span class="blue">D</span>
+    <span class="red">o</span>
+    <span class="yellow">o</span>
+    <span class="blue">g</span>
+    <span class="green">l</span>
+    <span class="red">e</span>
+  </h1>
+
+  <%= form_for(:word_entry, url: search_path) do |f| %>
+      <span>
+        <%= f.text_field :word, class: 'search_field' %>
+      </span>
+      <div>
+        <%= f.submit 'Doogle Search', class: 'search_button' %>
+      </div>
+  <% end%>
+
+</div>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
-  get 'doogle/search'
-  root 'doogle#search'
+  get 'doogle/home'
+  root 'doogle#home'
+  post '/search', to: 'doogle#search'
 end
