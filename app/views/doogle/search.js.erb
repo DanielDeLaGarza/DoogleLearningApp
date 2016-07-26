@@ -1,0 +1,6 @@
+
+$('#definitions').empty();
+$('<% @definitions.each do |definition| %><p class = "definition"><%= definition %></p><% end %>').appendTo('#definitions');
+
+$('#input_validation').empty();
+$('<p id = "validationtext"><%= @validation_text%></p>').appendTo('#input_validation');

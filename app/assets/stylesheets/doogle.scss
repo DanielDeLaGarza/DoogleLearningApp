@@ -3,8 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #doogle{
+  width: auto;
   margin: auto;
   text-align:center;
+}
+
+.adjustable{
+  display: inline-block;
+  max-width: 800px;
+  padding: 0px 15px 0px 15px;
+  resize: horizontal;
 }
 
 //Doogle title colors
@@ -29,14 +37,33 @@
 }
 
 //Input Stytes
-.search_field{
-  font-size: 1em;
-  width: 30%;
-  height: 25px;
+#search_field{
+  text-align: center;
+  font-size: 1.2em;
+  width: 100%;
+  height: 28px;
+  margin: auto;
+  resize:horizontal;
 }
 
-.search_button{
-  font-size: 1em;
+#search_button{
+  font-size: 1.2em;
   margin: 10px;
-  height: 25px;
+  height: 28px;
+}
+
+#input_validation{
+  font-size: 1.2em;
+  color: red;
+}
+
+//search results style
+.definitions{
+  width: 100%;
+  text-align:left;
+  padding: 10px;
+}
+
+.definition{
+  font-size: 1.2em;
 }

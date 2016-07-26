@@ -3,7 +3,7 @@ require 'faker'
 
 FactoryGirl.define do
   factory :word do
-    sequence :content do |c| "#{"t"*c}test" end
+    sequence :content do |c| "#{"t"*c}est" end
 
     factory :word_with_definitions do
       transient do

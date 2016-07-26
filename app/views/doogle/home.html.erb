@@ -8,13 +8,18 @@
     <span class="red">e</span>
   </h1>
 
-  <%= form_for(:word_entry, url: search_path) do |f| %>
-      <span>
-        <%= f.text_field :word, class: 'search_field' %>
-      </span>
-      <div>
-        <%= f.submit 'Doogle Search', class: 'search_button' %>
-      </div>
-  <% end%>
-
+  <div class = "adjustable">
+    <%= form_for(:word_entry, url: search_path, remote: true) do |f| %>
+        <span >
+          <%= f.text_field :word, id: 'search_field' %>
+        </span>
+        <!-- jquery inserts input validation text here -->
+        <div id = "input_validation"></div>
+        <div>
+          <%= f.submit 'Doogle Search', id: 'search_button' %>
+        </div>
+    <% end%>
+    <!-- jquery inserts search results here -->
+    <div id = "definitions" class = "definitions"></div>
+  </div>
 </div>
