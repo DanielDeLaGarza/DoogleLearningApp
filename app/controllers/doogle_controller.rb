@@ -21,8 +21,8 @@ class DoogleController < ApplicationController
       if(@word.valid?)
         @definitions = get_word_definitions_from_api(@word.content)
         if (@definitions != nil && @definitions.length > 0 )
-          #@word.save
-          #save_definitions(@word, @definitions)
+          @word.save
+          save_definitions(@word, @definitions)
 
         else
           @validation_text = "The word #{@word.content} was not found in our dictionary. are you sure you spelled it right?"
@@ -58,7 +58,15 @@ class DoogleController < ApplicationController
     end
 
     def get_word_definitions_from_api(word)
-      return []
+      conn = Faraday.new(:url => 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml') do |faraday|
+        faraday.request  :url_encoded             # form-encode POST params
+        faraday.response :logger                  # log requests to STDOUT
+        faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+      end
+
+      response = conn.get word, { :key => 'cab72891-f003-43ef-a983-253666d45082' }
+      doc  = Nokogiri::XML(response.body)
+      return doc.xpath("//dt").map {|d| d.text.gsub!(':', '')}
     end
 
     def format_definitions(definitions)
@@ -70,6 +78,8 @@ class DoogleController < ApplicationController
     end
 
     def save_definitions(word, definitions)
-
+      definitions.each do |definition|
+        word.definitions.create(content: definition)
+      end
     end
 end
