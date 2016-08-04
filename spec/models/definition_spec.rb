@@ -7,17 +7,28 @@ describe Definition do
     FactoryGirl.create(:word_with_definitions).should be_valid
     FactoryGirl.create(:definition).should be_valid
   end
+  it "has content" do
+    should validate_presence_of(:content)
+  end
+
+  it "has word_id" do
+    should validate_presence_of(:word_id)
+  end
 
   it "cannot have blank definition" do
-    FactoryGirl.build(:definition, content: '').should_not be_valid
+    should_not allow_value('').for(:content)
   end
 
   it "cannot have nil definition" do
-    FactoryGirl.build(:definition, content: nil).should_not be_valid
+    should_not allow_value(nil).for(:content)
   end
 
   it "cannot have nil word_id" do
-    FactoryGirl.build(:definition, word_id: nil).should_not be_valid
+    should_not allow_value(nil).for(:word_id)
+  end
+
+  it "belongs to word" do
+    should belong_to(:word)
   end
 
   describe "creating word and definitions" do
@@ -37,7 +48,7 @@ describe Definition do
       end
     end
 
-    it "each definiton's word_id matches word id" do
+    it "each definiton's word_id matches word.id" do
       word.definitions.each do |d|
         d.word_id.should eq(word.id)
       end
