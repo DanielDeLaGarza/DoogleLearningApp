@@ -10,12 +10,12 @@ gem 'coffee-rails', '~> 4.2'
 gem 'heroku_san'
 gem 'nokogiri'
 gem 'faraday'
-#gem 'rails_admin'
+#gem 'remotipart', github: 'mshibuya/remotipart'
+#gem 'rails_admin', '>= 1.0.0.rc'
 gem 'webmock'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'awesome_print'
 
 group :development, :test do
   gem 'chromedriver-helper', '1.0.0'
@@ -41,6 +41,8 @@ group :test do
   gem 'faker'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'rails-controller-testing'
 end
 
 group :production do

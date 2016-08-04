@@ -32,10 +32,10 @@ class DoogleController < ApplicationController
 
     respond_to do |format|
       format.js
+      format.json  { render :json => {:definitions => @definitions, :validation_text => @validation_text }}
     end
   end
 
-  #_PRIVATE__METHODS____________________________________________________________________
   private
     def get_word_definitions_from_api(word)
       conn = Faraday.new(:url => 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml') do |faraday|
@@ -44,7 +44,6 @@ class DoogleController < ApplicationController
         faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
       end
       response = conn.get word, { :key => 'cab72891-f003-43ef-a983-253666d45082' }
-
       doc  = Nokogiri::XML(response.body)
       doc.xpath("//dt").map {|d| d.text.gsub!(':', '')}
     end
