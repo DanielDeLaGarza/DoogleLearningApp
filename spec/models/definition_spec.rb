@@ -4,8 +4,8 @@ require 'rails_helper'
 
 describe Definition do
   it "has a valid factory" do
-    FactoryGirl.create(:word_with_definitions).should be_valid
-    FactoryGirl.create(:definition).should be_valid
+    expect(FactoryGirl.create(:word_with_definitions)).to be_valid
+    expect(FactoryGirl.create(:definition)).to be_valid
   end
   it "has content" do
     should validate_presence_of(:content)
@@ -35,28 +35,28 @@ describe Definition do
     let!(:word) {FactoryGirl.create(:word_with_definitions, definitions_count: 5)}
 
     it "word should be valid" do
-      word.should be_valid
+      expect(word).to be_valid
     end
 
     it "definitions count matches amount made" do
-      word.definitions.count.should eq(5)
+      expect(word.definitions.count).to eq(5)
     end
 
     it "each definition is valid" do
       word.definitions.each do |d|
-        d.should be_valid
+        expect(d).to be_valid
       end
     end
 
     it "each definiton's word_id matches word.id" do
       word.definitions.each do |d|
-        d.word_id.should eq(word.id)
+        expect(d.word_id).to eq(word.id)
       end
     end
     it "changing word_id to nil makes every definition invalid" do
       word.definitions.each do |d|
         d.word_id = nil
-        d.should_not be_valid
+        expect(d).to_not be_valid
       end
     end
   end
