@@ -121,6 +121,18 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.2.3 [global]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="remotipart (v1.2.1, /home/kyloren/sandbox/daniel-doogle/DoogleLearningApp/lib/remotipart-master) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib/remotipart-master/lib" />
+          <root url="file://$MODULE_DIR$/lib/remotipart-master/vendor" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/lib/remotipart-master/lib" />
+          <root url="file://$MODULE_DIR$/lib/remotipart-master/vendor" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

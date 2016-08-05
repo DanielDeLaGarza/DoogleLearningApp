@@ -12,8 +12,8 @@ gem 'nokogiri'
 gem 'faraday'
 
 #rails_admin not working with rails 5
-#gem 'remotipart', github: 'mshibuya/remotipart' #can't pull this gem from git hub??
-#gem 'rails_admin', '>= 1.0.0.rc'
+gem 'remotipart', :path => './lib/remotipart-master/'
+gem 'rails_admin', '>= 1.0.0.rc'
 
 gem 'webmock'
 gem 'jquery-rails'
