@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'rails', '4.2.7'
+gem 'rails', '5.0.0'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -10,7 +10,11 @@ gem 'coffee-rails', '~> 4.2'
 gem 'heroku_san'
 gem 'nokogiri'
 gem 'faraday'
-gem 'rails_admin'
+
+#rails_admin not working with rails 5
+#gem 'remotipart', github: 'mshibuya/remotipart' #can't pull this gem from git hub??
+#gem 'rails_admin', '>= 1.0.0.rc'
+
 gem 'webmock'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'

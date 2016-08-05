@@ -5,6 +5,7 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rspec'
 require 'webmock/rspec'
+require 'shoulda/matchers'
 
 WebMock.disable_net_connect!(allow_localhost: true)
 
