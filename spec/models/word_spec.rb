@@ -25,7 +25,7 @@ describe Word do
   end
 
   it "is unique" do
-    #should validate_uniqueness_of(:permalink) #validate_uniqueness seems to be broken, doesn't recognize downcase! in before save
+    #should validate_uniqueness_of(:permalink) #validate_uniqueness seems to be broken because of downcase! in before save
     word = FactoryGirl.create(:word, content: 'test')
     expect(FactoryGirl.build(:word, content: 'test')).to_not be_valid
   end

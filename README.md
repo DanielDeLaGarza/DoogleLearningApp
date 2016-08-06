@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple dictionary application.
 
-Things you may want to cover:
+Ruby version: ruby 2.3.1p112
 
-* Ruby version
+run
 
-* System dependencies
+To create database run: rails db:create
 
-* Configuration
+To run app tun: rails server
 
-* Database creation
+To test app run: rake
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can check out a deploy of the app at:
+https://young-eyrie-50222.herokuapp.com/

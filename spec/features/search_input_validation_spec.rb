@@ -17,18 +17,12 @@ feature 'visitor searches a word', :js => true do
       @word = FactoryGirl.create(:word_with_definitions, definitions_count: 5)
       load_home
       search_word(@word.content)
-      expect(WebMock).not_to have_requested(:get, 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/test').with(:query =>
-                                           { :key => 'cab72891-f003-43ef-a983-253666d45082' })
-
       expect(page).to have_css('.definition', :minimum => 1)
     end
 
     scenario 'word not in database'do
       load_home
       search_word('test')
-      #expect(WebMock).to have_requested(:get, 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/test').with(:query =>
-      #                                 { :key => 'cab72891-f003-43ef-a983-253666d45082' })
-
       expect(page).to have_css('.definition', :count => 1)
     end
   end
